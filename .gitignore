@@ -234,3 +234,13 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/OSGeo4W/apps
+/OSGeo4W/etc
+/OSGeo4W/include
+/OSGeo4W/lib
+/OSGeo4W/share
+/OSGeo4W/var/log
+/OSGeo4W/msvcp110.dll
+/OSGeo4W/msvcr110.dll
+/OSGeo4W/OSGeo4W.bat
+/OSGeo4W/OSGeo4W.ico

@@ -1,0 +1,12 @@
+Use OSGeo4W64/OSGeo4W32 and choose Adwanced Install:
+- gdal 2
+- gdal-python
+- python-core
+- points2grid
+- laszip
+
+Move OSGeo4W64/OSGeo4W32 binaries to 'OSGeo4W' (this folder). 
+
+
+You can also download whole package with binaries from:
+https://github.com/kubaszostak/gdal-dragndrop/releases
