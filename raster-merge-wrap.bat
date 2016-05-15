@@ -11,8 +11,8 @@ call %~dp0\_init.bat %1 %2 %3
 
 gdalwarp  -multi -wm %GDAL_CACHEMAX% -ovr NONE -r average %TiffOpts%  %PixelSize% *%SrcExt% _merge.tif
 
-%~dp0\raster-pyramid.bat _merge.tif
-%~dp0\raster-calc-stats.bat _merge.tif
+call %~dp0\raster-pyramid.bat _merge.tif
+call %~dp0\raster-calc-stats.bat _merge.tif
 
 echo.
 echo %~n0 finished.

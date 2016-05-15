@@ -16,6 +16,9 @@ SET SrcName=%~n1
 SET SrcExt=%~x1
 :: .las
 
+SET SrcDirName=%~dpn1
+:: C:\UMGDY\Lidar2015\N-33-48-C-b-2-3
+
 CD /D %SrcDir%
 
 
@@ -27,9 +30,6 @@ CD /D %SrcDir%
 SET TiffOpts=-of GTiff -co COMPRESS=LZW -co BIGTIFF=YES -co TILED=YES  -co PREDICTOR=2
 SET JpegOpts=-co compress=lzw -co photometric=ycbcr -co JPEG_QUALITY=85
 
-SET StartTime=%TIME%
-set /A WorkingTimeMin= (%TIME%-%STARTTIME%)*0.000166667
-
-call "%~dp0\OSGeo4W\bin\o4w_env.bat"
+CALL "%~dp0\OSGeo4W\bin\o4w_env.bat"
 
 

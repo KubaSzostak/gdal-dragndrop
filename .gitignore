@@ -244,3 +244,5 @@ _Pvt_Extensions
 /OSGeo4W/msvcr110.dll
 /OSGeo4W/OSGeo4W.bat
 /OSGeo4W/OSGeo4W.ico
+/#run.bat
+/xyz-sort/xyz-sort.exe

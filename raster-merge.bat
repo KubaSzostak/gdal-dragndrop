@@ -4,26 +4,13 @@ echo *** %1
 echo.
 call %~dp0\_init.bat %1 %2 %3
 
-REM SET PixelSize=-ps 0.25 .25
-REM SET PixelSize=-tr 0.6 0.6
+gdalbuildvrt %2 _merge.vrt *%SrcExt%
+call %~dp0\raster-translate-lzw.bat _merge.vrt 
 
-SET TifOutFile=_merge.tif
-SET TifSrcList=_merge-list.txt
+call %~dp0\raster-pyramid.bat _merge.tif
 
-
-IF EXIST %TifOutFile% (
-  echo %TifOutFile% already exists. It will be used to generate mosaic.
-  pause
-)
-
-dir /b *%SrcExt% > %TifSrcList%
-
- 
-gdal_merge.bat  %PixelSize% -v %TiffOpts% -o %TifOutFile% --optfile %TifSrcList%
-
-
-%~dp0\raster-pyramid.bat %TifOutFile%
-%~dp0\raster-calc-stats.bat %TifOutFile%
+echo Calculating statistics...
+call %~dp0\raster-calc-stats.bat _merge.tif
 
 echo.
 echo %~n0 finished.

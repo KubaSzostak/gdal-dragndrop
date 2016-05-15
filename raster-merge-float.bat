@@ -4,11 +4,13 @@ echo *** %1
 echo.
 call %~dp0\_init.bat %1 %2 %3
 
-gdalbuildvrt _merge.vrt *%SrcExt%
+gdalbuildvrt -vrtnodata -9999.0 _merge.vrt *%SrcExt%
+call %~dp0\raster-translate-lzw.bat _merge.vrt 
 
-%~dp0\raster-translate-lzw.bat _merge.vrt 
-%~dp0\raster-pyramid.bat _merge.vrt_lzw.tif
-%~dp0\raster-calc-stats.bat _merge.vrt_lzw.tif
+call %~dp0\raster-pyramid.bat _merge.tif
+
+echo Calculating statistics...
+call %~dp0\raster-calc-stats.bat _merge.tif
 
 echo.
 echo %~n0 finished.

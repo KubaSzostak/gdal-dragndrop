@@ -4,14 +4,14 @@ echo *** %1
 echo.
 call %~dp0\_init.bat %1 %2 %3
 
-SET OutDir=translate-lzw
+SET OutDir=xyz-sort
 
 
 if not exist %OutDir% mkdir %OutDir%
 
 for %%v in (*%SrcExt%) do (
    echo %%v
-   gdal_translate %TiffOpts% %%v %OutDir%\%%v
+   %~dp0\xyz-sort\xyz-sort.exe %%v %OutDir%\%%v
    echo.
 ) 
 
