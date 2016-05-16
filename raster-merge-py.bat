@@ -7,6 +7,10 @@ call %~dp0\_init.bat %1 %2 %3
 REM SET PixelSize=-ps 0.25 .25
 REM SET PixelSize=-tr 0.6 0.6
 
+echo This tool is obolete: it raises MemoryError for Float32 rasters larger than 2GB
+echo Use raster-merge.bat instead.
+echo. 
+
 SET TifOutFile=_merge.tif
 SET TifSrcList=_merge-list.txt
 

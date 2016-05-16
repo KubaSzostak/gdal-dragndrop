@@ -42,7 +42,9 @@ namespace xyz_sort
                     if (!sortedLines.Add(ln, lnNo))
                     {
                         Console.WriteLine("Invalid file format, line number " + lnNo.ToString() + ": ");
-                        Console.WriteLine(ln.Substring(0, 100));
+						if (ln.Length > 100)
+						  ln = ln.Substring(0, 100);
+                        Console.WriteLine(ln);
                         Console.ReadKey();
                         return;
                     }

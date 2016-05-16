@@ -8,8 +8,6 @@ gdalbuildvrt -vrtnodata -9999.0 _merge.vrt *%SrcExt%
 call %~dp0\raster-translate-lzw.bat _merge.vrt 
 
 call %~dp0\raster-pyramid.bat _merge.tif
-
-echo Calculating statistics...
 call %~dp0\raster-calc-stats.bat _merge.tif
 
 echo.
