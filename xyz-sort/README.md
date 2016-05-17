@@ -6,7 +6,7 @@ The supported column separators are: space, comma, semicolon and tabulations.
   
 Usage:
 ```bat  
-   xyz-sort <source.xyz> [sorted.xyz]  
+   xyz_sort <source.xyz> [sorted.xyz]  
 ```
   
   

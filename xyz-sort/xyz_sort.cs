@@ -18,7 +18,7 @@ namespace xyz_sort
                "The supported column separators are: space, comma, semicolon and tabulations.\n" +
                "\n" +
                "Usage: \n" +
-               "   xyz-sort <source.xyz> [sorted.xyz]\n");
+               "   xyz_sort <source.xyz> [sorted.xyz]\n");
         }
 
         static void Main(string[] args)
