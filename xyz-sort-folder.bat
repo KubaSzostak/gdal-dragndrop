@@ -11,7 +11,7 @@ if not exist %OutDir% mkdir %OutDir%
 
 for %%v in (*%SrcExt%) do (
    echo %%v
-   %~dp0\xyz-sort\xyz_sort.exe %%v %OutDir%\%%v
+   %~dp0\dragndrop\xyz_sort.exe %%v %OutDir%\%%v
    echo.
 ) 
 

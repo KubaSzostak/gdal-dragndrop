@@ -245,5 +245,5 @@ _Pvt_Extensions
 /OSGeo4W/OSGeo4W.bat
 /OSGeo4W/OSGeo4W.ico
 /#run.bat
-/xyz-sort/xyz_sort.vshost.exe
-/xyz-sort/xyz_sort.vshost.exe.manifest
+*.vshost.exe.manifest
+*.vshost.exe
