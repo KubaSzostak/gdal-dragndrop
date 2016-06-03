@@ -12,5 +12,5 @@ gdaladdo -ro -r average --config COMPRESS_OVERVIEW %Compression% --config PREDIC
 
 echo %~n0 finished.
 echo %1.ovr
-timeout 30
+timeout 3
 echo.
