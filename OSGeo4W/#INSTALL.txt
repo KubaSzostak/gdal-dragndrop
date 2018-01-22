@@ -1,4 +1,4 @@
-Use OSGeo4W64/OSGeo4W32 and choose Adwanced Install:
+Use [OSGeo4W64/OSGeo4W32](https://trac.osgeo.org/osgeo4w/) and choose Adwanced Install:
 - gdal 2
 - gdal-python
 - python-core
