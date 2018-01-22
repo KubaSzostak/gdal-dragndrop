@@ -25,8 +25,9 @@ CD /D %SrcDir%
 :: - PREDICTOR=1: 52.3MB
 :: - PREDICTOR=2: 31.8MB
 :: - PREDICTOR=3: 60.2MB
-:: ERROR 1: PredictorSetup:Horizontal differencing "Predictor" not supported with 64-bit samples
-:: '-co PREDICTOR=2' option removed
+:: ERROR 1: PredictorSetup:Horizontal differencing "Predictor" not supported with 64-bit samples 
+::   (This error can only happen with PREDICTOR=2 as a GTiff creation option.)
+::   '-co PREDICTOR=2' option removed
 
 SET TiffOpts=-of GTiff -co COMPRESS=LZW -co BIGTIFF=YES -co TILED=YES  
 SET JpegOpts=-co compress=lzw -co photometric=ycbcr -co JPEG_QUALITY=85
