@@ -5,7 +5,7 @@ echo.
 call %~dp0\_init.bat %1 %2 %3
 
 
-SET MergeName=FotoPlan-2017
+SET MergeName=FotoMapa-2017
 SET MergeParams=-vrtnodata 255 
 
 echo VRT...
