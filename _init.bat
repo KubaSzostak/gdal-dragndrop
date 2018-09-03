@@ -3,7 +3,7 @@ echo.
 REM Set RAM in MB for read/write caching
 REM the same is used also to set RAM in MB for wrap operations
 SET GDAL_CACHEMAX=512
-SET GDAL_NUM_THREADS=ALL_CPU
+SET GDAL_NUM_THREADS=ALL_CPUS
 
 :: %1 = C:\UMGDY\Lidar2015\N-33-48-C-b-2-3.las
 

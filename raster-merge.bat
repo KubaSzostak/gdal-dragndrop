@@ -4,6 +4,8 @@ echo *** %1
 echo.
 call %~dp0\_init.bat %1 %2 %3
 
+SET MergeParams=-vrtnodata 255 
+
 gdalbuildvrt %MergeParams% _merge.vrt *%SrcExt%
 call %~dp0\raster-translate-lzw.bat _merge.vrt 
 

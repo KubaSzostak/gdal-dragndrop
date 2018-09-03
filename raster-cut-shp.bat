@@ -10,13 +10,13 @@ SET TiffOut=%~dpn1-cut.tif
 if NOT "%2"=="" SET TiffOut=%~dpn1-%~n2.tif
 
 
-echo Input TIFF:        %1
 echo Cutting shapefile: %ShpFile%
+echo Input TIFF:        %1
 echo Output TIFF:       %TiffOut%
 
 echo.
 
-gdalwarp -srcnodata -9999.0 -dstnodata -9999.0 -r average -wm %GDAL_CACHEMAX% -multi %TiffOpts% -cutline %ShpFile% -crop_to_cutline %1 %TiffOut%
+gdalwarp -srcnodata 255 -dstnodata 0 -r average -wm %GDAL_CACHEMAX% -multi %TiffOpts% -cutline %ShpFile% -crop_to_cutline %1 %TiffOut%
 
 
 echo.
