@@ -32,6 +32,6 @@ CD /D %SrcDir%
 SET TiffOpts=-of GTiff -co COMPRESS=LZW -co BIGTIFF=YES -co TILED=YES  
 SET JpegOpts=-co compress=lzw -co photometric=ycbcr -co JPEG_QUALITY=85
 
-CALL "%~dp0\OSGeo4W\bin\o4w_env.bat"
+CALL "%~dp0\osgeo\bin\o4w_env.bat"
 
 

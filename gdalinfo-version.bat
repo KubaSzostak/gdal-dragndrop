@@ -1,6 +1,6 @@
 @echo off
 
-CALL "%~dp0\OSGeo4W\bin\o4w_env.bat"
+CALL "%~dp0\osgeo\bin\o4w_env.bat"
 gdalinfo --version
 
 python --version

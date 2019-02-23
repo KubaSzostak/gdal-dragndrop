@@ -13,7 +13,6 @@ for %%v in (*%SrcExt%) do (
    echo %%v
    gdal_translate %TiffOpts% -a_nodata 255 -a_srs EPSG:2180 %%v %OutDir%\%%v
    echo.
-
 ) 
 
 

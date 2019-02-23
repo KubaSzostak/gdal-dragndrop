@@ -5,8 +5,15 @@ Use [OSGeo4W64/OSGeo4W32](https://trac.osgeo.org/osgeo4w/) and choose Adwanced I
 - points2grid
 - laszip
 
-Move OSGeo4W64/OSGeo4W32 binaries to 'OSGeo4W' (this folder). 
+Move OSGeo4W64/OSGeo4W32 binaries to 'osgeo' (this folder). 
 
 
 You can also download whole package with binaries from:
 https://github.com/kubaszostak/gdal-dragndrop/releases
+
+***
+
+- Add \OSGeo4W64\bin to PATH system variable
+- Copy 'osgeo' from OSGeo4W64\apps\Python27\Lib\site-packages\osgeo to OSGeo4W64\bin\osgeo
+- Package installer for Python (PIP) requires Microsoft Visual C++ 9.0. Get it from http://aka.ms/vcpython27
+- python.exe -m pip install GDAL
