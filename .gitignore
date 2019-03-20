@@ -5,10 +5,12 @@ osgeo/*
 !osgeo/#INSTALL.txt
 
 # User-specific files
+*.pyc
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+*.tif
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
