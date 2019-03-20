@@ -4,6 +4,7 @@ REM Set RAM in MB for read/write caching
 REM the same is used also to set RAM in MB for wrap operations
 SET GDAL_CACHEMAX=512
 SET GDAL_NUM_THREADS=ALL_CPUS
+SET GDAL_TIFF_OVR_BLOCKSIZE=512
 
 :: %1 = C:\UMGDY\Lidar2015\N-33-48-C-b-2-3.las
 

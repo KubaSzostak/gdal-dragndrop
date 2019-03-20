@@ -9,7 +9,7 @@ if NOT "%2"=="" SET Compression=%2
 ::  PredictorSetup:Horizontal differencing "Predictor" not supported with 64-bit samples
 
 gdaladdo -clean %1
-gdaladdo -ro -r average -minsize 512 --config COMPRESS_OVERVIEW %Compression% --config BIGTIFF_OVERVIEW YES %1
+gdaladdo -ro -r average --config GDAL_TIFF_OVR_BLOCKSIZE 512 --config COMPRESS_OVERVIEW %Compression% --config BIGTIFF_OVERVIEW YES %1
 
 
 echo %~n0 finished.

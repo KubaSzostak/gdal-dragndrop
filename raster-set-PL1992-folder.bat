@@ -6,7 +6,7 @@ call %~dp0\_init.bat %1 %2 %3
 
 for %%v in (*%SrcExt%) do (
    echo %%v
-   %~dp0\raster-set-PL1992.bat %%v
+   python.exe %~dp0\osgeo\bin\gdal_edit.py -a_srs EPSG:2180 %%v
    echo.
 ) 
 
