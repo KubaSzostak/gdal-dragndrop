@@ -1,4 +1,6 @@
 @echo off
+echo *** %~n0 ...
+echo *** %1
 
 call %~dp0\_init.bat %1 %2 %3
 SET MergeParams=-vrtnodata -9999.0 
