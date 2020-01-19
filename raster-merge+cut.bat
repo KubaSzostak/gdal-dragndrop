@@ -5,8 +5,8 @@ echo.
 call %~dp0\_init.bat %1 %2 %3
 
 
-SET MergeName=FotoMapa-2017
-SET MergeParams=-vrtnodata 255 
+SET MergeName=FotoMapa-2019
+::SET MergeParams=-vrtnodata 0 
 
 echo VRT...
 gdalbuildvrt %MergeParams% %MergeName%.vrt *%SrcExt%
@@ -18,25 +18,37 @@ SET ExtTrm=-te 455000 710000 503000 750000
 SET ExtZw=-te 490000 695000 555000 735000
 
 echo.
-echo Wybrzeze...
+echo Merge Wybrzeze...
 gdalwarp -wm 1024 -multi %ExtWybrz%  %TiffOpts% %MergeName%.vrt %MergeName%-wybrz%SrcExt%
 
 echo.
-echo Zatoka...
+echo Merge Zatoka...
 gdalwarp -wm 1024 -multi %ExtZatoka% %TiffOpts% %MergeName%.vrt %MergeName%-zatoka%SrcExt%
 
 echo.
-echo Trojmiasto...
+echo Merge Trojmiasto...
 gdalwarp -wm 1024 -multi %ExtTrm%    %TiffOpts% %MergeName%.vrt %MergeName%-trm%SrcExt%
 
 echo.
-echo Zalew wislany...
+echo Merge Zalew wislany...
 gdalwarp -wm 1024 -multi %ExtZw%     %TiffOpts% %MergeName%.vrt %MergeName%-zw%SrcExt%
 
 echo.
+
+echo.
+echo Pyramid Wybrzeze...
 call %~dp0\raster-pyramid.bat %MergeName%-wybrz%SrcExt%
+
+echo.
+echo Pyramid Zatoka...
 call %~dp0\raster-pyramid.bat %MergeName%-zatoka%SrcExt%
+
+echo.
+echo Pyramid Trojmiasto...
 call %~dp0\raster-pyramid.bat %MergeName%-trm%SrcExt%
+
+echo.
+echo Pyramid Zalew wislany...
 call %~dp0\raster-pyramid.bat %MergeName%-zw%SrcExt%
 
 echo.
