@@ -19,27 +19,27 @@ SET ExtZw=-te 490000 695000 555000 735000
 
 echo.
 echo Merge Wybrzeze...
-gdalwarp -wm 1024 -multi %ExtWybrz%  %TiffOpts% %MergeName%.vrt %MergeName%-wybrz%SrcExt%
+gdalwarp -wm 1024 -multi %ExtWybrz%  %TiffOpts% %MergeName%.vrt ..\%MergeName%-wybrz%SrcExt%
 
 echo.
 echo Merge Zatoka...
-gdalwarp -wm 1024 -multi %ExtZatoka% %TiffOpts% %MergeName%.vrt %MergeName%-zatoka%SrcExt%
+gdalwarp -wm 1024 -multi %ExtZatoka% %TiffOpts% %MergeName%.vrt ..\%MergeName%-zatoka%SrcExt%
 
 echo.
 echo Merge Trojmiasto...
-gdalwarp -wm 1024 -multi %ExtTrm%    %TiffOpts% %MergeName%.vrt %MergeName%-trm%SrcExt%
+gdalwarp -wm 1024 -multi %ExtTrm%    %TiffOpts% %MergeName%.vrt ..\%MergeName%-trm%SrcExt%
 
 echo.
 echo Merge Zalew wislany...
-gdalwarp -wm 1024 -multi %ExtZw%     %TiffOpts% %MergeName%.vrt %MergeName%-zw%SrcExt%
+gdalwarp -wm 1024 -multi %ExtZw%     %TiffOpts% %MergeName%.vrt ..\%MergeName%-zw%SrcExt%
 
 echo.
 echo.
 
-call %~dp0\raster-pyramid.bat %MergeName%-wybrz%SrcExt%
-call %~dp0\raster-pyramid.bat %MergeName%-zatoka%SrcExt%
-call %~dp0\raster-pyramid.bat %MergeName%-trm%SrcExt%
-call %~dp0\raster-pyramid.bat %MergeName%-zw%SrcExt%
+call %~dp0\raster-pyramid.bat ..\%MergeName%-wybrz%SrcExt%
+call %~dp0\raster-pyramid.bat ..\%MergeName%-zatoka%SrcExt%
+call %~dp0\raster-pyramid.bat ..\%MergeName%-trm%SrcExt%
+call %~dp0\raster-pyramid.bat ..\%MergeName%-zw%SrcExt%
 
 echo.
 echo %~n0 finished.
