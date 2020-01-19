@@ -34,21 +34,11 @@ echo Merge Zalew wislany...
 gdalwarp -wm 1024 -multi %ExtZw%     %TiffOpts% %MergeName%.vrt %MergeName%-zw%SrcExt%
 
 echo.
-
 echo.
-echo Pyramid Wybrzeze...
+
 call %~dp0\raster-pyramid.bat %MergeName%-wybrz%SrcExt%
-
-echo.
-echo Pyramid Zatoka...
 call %~dp0\raster-pyramid.bat %MergeName%-zatoka%SrcExt%
-
-echo.
-echo Pyramid Trojmiasto...
 call %~dp0\raster-pyramid.bat %MergeName%-trm%SrcExt%
-
-echo.
-echo Pyramid Zalew wislany...
 call %~dp0\raster-pyramid.bat %MergeName%-zw%SrcExt%
 
 echo.
