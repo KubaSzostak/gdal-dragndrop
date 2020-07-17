@@ -12,7 +12,7 @@ echo VRT...
 gdalbuildvrt %MergeParams% %MergeName%.vrt *%SrcExt%
 
 :: -te xmin ymin xmax ymax
-SET ExtWybrz=-te 410000 765000 465000 777000
+SET ExtWybrz=-te 345000 745000 465000 777000
 SET ExtZatoka=-te 455000 743000 500000 777000
 SET ExtTrm=-te 455000 710000 503000 750000
 SET ExtZw=-te 490000 695000 555000 735000
